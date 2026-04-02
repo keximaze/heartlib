@@ -1401,6 +1401,12 @@ TAG_STYLE_PRESETS = {
     "Thrash Metal": "thrash metal, aggressive shouted vocal, fast palm-muted guitars, double-kick drums, relentless riffing, raw heavy mix",
     "Metalcore": "metalcore, screamed verses and sung chorus, downtuned guitars, breakdown drums, huge hook, modern heavy mix",
     "Acoustic Ballad": "acoustic ballad, intimate vocal, fingerpicked guitar, soft percussion, emotional chorus, warm close mix",
+    "Electric Blues": "electric blues, overdriven guitar, soulful male vocal, shuffle drums, walking bass, 12 bar blues, warm tube amp, 90 bpm",
+    "Jazz Blues": "jazz blues, clean hollow body guitar, smooth saxophone, upright bass, swing drums, walking bassline, warm jazz vocal, 120 bpm",
+    "Chicago Blues": "chicago blues, harmonica, overdriven electric guitar, punchy drums, groovy bass, call and response vocal, urban blues, 100 bpm",
+    "Slow Blues": "slow blues, emotional guitar solo, heartfelt male vocal, sparse drums, weeping guitar bends, 60 bpm, minor key",
+    "Heavy Metal": "heavy metal, distorted electric guitar, aggressive male vocal, double kick drums, palm muted riff, heavy bass, loud mix, 140 bpm",
+    "Death Metal": "death metal, downtuned guitar, growling vocal, blast beats, heavy distortion, dark atmosphere, 160 bpm",
 }
 LYRIC_STYLE_PRESETS = {
     "Rock Anthem": "[Intro]\n\n[Verse]\nStreetlights wake up and the avenue glows\nBoots hit the ground and the whole block knows\nWe came to turn the silence into sparks tonight\n\n[Prechorus]\nEvery closed door starts shaking loose\nWhen the crowd and the amps cut through\n\n[Chorus]\nWe were made for the fire\nMade for the noise\nHands in the air with a thousand voices\nNo backing down when the night gets wild\nWe turn the dark electric for a little while\n\n[Bridge]\nTurn it up\nLet it ride\n\n[Outro]\nWe are still here",
