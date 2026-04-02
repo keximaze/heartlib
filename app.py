@@ -1557,11 +1557,11 @@ def default_devices(mac_safe: bool) -> tuple[torch.device, torch.device]:
     if mac_safe:
         if not mps_available():
             raise gr.Error("Mac-safe mode requires MPS support on this machine.")
-        return torch.device("mps"), torch.device("mps")
+        return torch.device("mps"), torch.device("cpu")
     if torch.cuda.is_available():
         return torch.device("cuda"), torch.device("cuda")
     if mps_available():
-        return torch.device("mps"), torch.device("mps")
+        return torch.device("mps"), torch.device("cpu")
     return torch.device("cpu"), torch.device("cpu")
 
 
