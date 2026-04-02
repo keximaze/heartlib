@@ -286,10 +286,20 @@ class HeartMuLaGenPipeline:
             print("⚡ INT8 weight-only quantization applied to HeartMuLa backbone + decoder.")
         except Exception as e:
             print(f"INT8 quantization skipped ({e}).")
-        # torch.compile for fused kernels
+        # torch.compile for fused kernels (suppress verbose tracing output)
         try:
+            import logging
+            _dynamo_logger = logging.getLogger("torch._dynamo")
+            _inductor_logger = logging.getLogger("torch._inductor")
+            _prev_dynamo = _dynamo_logger.level
+            _prev_inductor = _inductor_logger.level
+            _dynamo_logger.setLevel(logging.ERROR)
+            _inductor_logger.setLevel(logging.ERROR)
+            os.environ.setdefault("TORCHDYNAMO_VERBOSE", "0")
             self._mula.backbone = torch.compile(self._mula.backbone)
             self._mula.decoder = torch.compile(self._mula.decoder)
+            _dynamo_logger.setLevel(_prev_dynamo)
+            _inductor_logger.setLevel(_prev_inductor)
             print("⚡ torch.compile applied to HeartMuLa backbone + decoder.")
         except Exception as e:
             print(f"torch.compile skipped ({e}), using eager mode.")
